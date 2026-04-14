@@ -34,23 +34,31 @@ const Nav = styled.nav`
 
 `;
 
-const NavItem = styled.button`
+const NavItem = styled.div`
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 6px;
+    font-family: Arial;
+    transition: color 0.3s ease;
 
-  background: transparent;
-  border: none;
+    &:hover {
+        color: #22c55e;
+    }
 
-  color: white;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #22c55e;
+        transition: width 0.3s ease;
+    }
 
-  font-size: 16px;
-
-  cursor: pointer;
-
-  transition: 0.2s;
-
-  &:hover {
-    color: #22c55e;
-  }
-
+    &:hover::after {
+        width: 100%;
+    }
 `;
 
 const scrollToSection = (id) => {

@@ -18,10 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-nav {
+h1 {
   font-family: "Digital-7 Mono", monospace;
   letter-spacing: 2px;
 }
@@ -87,3 +84,4 @@ nav a:hover {
 .hero-container {
   padding-top: 20px;
 }
+
