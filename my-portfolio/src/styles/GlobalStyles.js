@@ -10,7 +10,8 @@ export const GlobalStyles = createGlobalStyle`
 
 body {
   font-family: system-ui, sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: linear-gradient(
     135deg,
     #020617,
@@ -23,17 +24,13 @@ body {
 
 #root {
 
-  display: flex;
+  display: block;
 
-  height: 100vh;
+  min-height: 100vh;
 
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  scroll-snap-type: x mandatory;
+  overflow-x: hidden;
 
 }
-
 /* Smooth scroll */
 
 html {

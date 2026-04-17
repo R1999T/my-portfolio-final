@@ -11,11 +11,11 @@ function Hero() {
                 style={{
                     display: "flex",
                     flexWrap: "wrap",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     justifyContent: "center",
                     marginTop: "90px",
                     gap: "10px",
-                    minHeight: "100vh",
+                    minHeight: "calc(100vh - 80px)",
                     padding: "0 40px"
                 }}
             >
@@ -48,7 +48,8 @@ function Hero() {
                     className="hero-text"
                     style={{
                         maxWidth: "500px",
-                        lineHeight: "1.5"
+                        lineHeight: "1.5",
+                        // height: "1500px"
                     }}
                 >
                     <h1 style={{ marginBottom: "10px" }}>
@@ -62,6 +63,7 @@ function Hero() {
                     <p style={{ marginBottom: "20px" }}>
                         Aspiring VLSI / Hardware Engineer
                     </p>
+                    
                 </div>
 
             </div>

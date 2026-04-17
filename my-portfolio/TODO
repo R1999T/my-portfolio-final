@@ -9,6 +9,12 @@ Styling
 V
 Polish
 
+/*DIMAG KHARAB HOGAYA DEBUG KARTE KARTE 17_4_2026*/
+- Switched from horizontal to vertical scrolling layout(horizontal sucks!!)
+- Replaced fixed height with min-height on root
+- Stabilized section structure
+- Fixed independent scrolling behavior
+- Adjusted hero alignment to remove large gap below navbar
 
 
 

@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import React from "react";
+
+
 
 const Nav = styled.nav`
 
@@ -34,26 +37,57 @@ const Nav = styled.nav`
 
 `;
 
+// const NavItem = styled.div`
+//     cursor: pointer;
+//     position: relative;
+//     padding-bottom: 6px;
+//     font-family: Arial;
+//     transition: color 0.3s ease;
+
+//     &:hover {
+//         color: #22c55e;
+//     }
+
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         left: 0;
+//         bottom: 0;
+//         width: 0;
+//         height: 2px;
+//         background-color: #22c55e;
+//         transition: width 0.3s ease;
+//     }
+
+//     &:hover::after {
+//         width: 100%;
+//     }
+// `;
 const NavItem = styled.div`
     cursor: pointer;
     position: relative;
     padding-bottom: 6px;
-    font-family: Arial;
     transition: color 0.3s ease;
 
-    &:hover {
-        color: #22c55e;
-    }
+    color: ${({ $isActive }) =>
+        $isActive ? "#22c55e" : "white"};
 
     &::after {
         content: "";
         position: absolute;
         left: 0;
         bottom: 0;
-        width: 0;
+
+        width: ${({ $isActive }) =>
+            $isActive ? "100%" : "0"};
+
         height: 2px;
         background-color: #22c55e;
         transition: width 0.3s ease;
+    }
+
+    &:hover {
+        color: #22c55e;
     }
 
     &:hover::after {
@@ -61,32 +95,50 @@ const NavItem = styled.div`
     }
 `;
 
-const scrollToSection = (id) => {
-    const section = document.getElementById(id);
 
-    section.scrollIntoView({
-        behavior: "smooth",
-        inline: "start"
-    });
+
+const Navbar = ({ activeSection, setActiveSection }) => {
+
+    const scrollToSection = (sectionId) => {
+    setActiveSection(sectionId);
+
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+        element.scrollIntoView({
+            behavior: "smooth",
+        });
+    }
 };
 
-function Navbar() {
     return (
         <Nav>
 
-            <NavItem onClick={() => scrollToSection("hero")}>
+            <NavItem
+                $isActive={activeSection === "hero"}
+                onClick={() => scrollToSection("hero")}
+            >
                 Home
             </NavItem>
 
-            <NavItem onClick={() => scrollToSection("about")}>
+            <NavItem
+                $isActive={activeSection === "about"}
+                onClick={() => scrollToSection("about")}
+            >
                 About
             </NavItem>
 
-            <NavItem onClick={() => scrollToSection("services")}>
+            <NavItem
+                $isActive={activeSection === "services"}
+                onClick={() => scrollToSection("services")}
+            >
                 Services
             </NavItem>
 
-            <NavItem onClick={() => scrollToSection("contact")}>
+            <NavItem
+                $isActive={activeSection === "contact"}
+                onClick={() => scrollToSection("contact")}
+            >
                 Contact
             </NavItem>
 
