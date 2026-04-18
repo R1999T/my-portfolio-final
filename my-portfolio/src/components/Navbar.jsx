@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import { useState } from "react";   // ADDED
 
 
 
@@ -11,7 +12,7 @@ const Nav = styled.nav`
   left: 12px;
   right: 12px;
 
-  height: 60px;
+  min-height: 60px; 
 
   display: flex;
   align-items: center;
@@ -34,35 +35,13 @@ const Nav = styled.nav`
     0 8px 24px rgba(0,0,0,0.3);
 
   z-index: 1000;
+@media (max-width: 768px) {
+  justify-content: space-between;
+  padding: 12px 16px;
+}
 
 `;
 
-// const NavItem = styled.div`
-//     cursor: pointer;
-//     position: relative;
-//     padding-bottom: 6px;
-//     font-family: Arial;
-//     transition: color 0.3s ease;
-
-//     &:hover {
-//         color: #22c55e;
-//     }
-
-//     &::after {
-//         content: "";
-//         position: absolute;
-//         left: 0;
-//         bottom: 0;
-//         width: 0;
-//         height: 2px;
-//         background-color: #22c55e;
-//         transition: width 0.3s ease;
-//     }
-
-//     &:hover::after {
-//         width: 100%;
-//     }
-// `;
 const NavItem = styled.div`
     cursor: pointer;
     position: relative;
@@ -79,7 +58,7 @@ const NavItem = styled.div`
         bottom: 0;
 
         width: ${({ $isActive }) =>
-            $isActive ? "100%" : "0"};
+        $isActive ? "100%" : "0"};
 
         height: 2px;
         background-color: #22c55e;
@@ -93,65 +72,92 @@ const NavItem = styled.div`
     &:hover::after {
         width: 100%;
     }
+  }
+`;
+
+const Menu = styled.div`
+  display: flex;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    display: ${({ $open }) => ($open ? "flex" : "none")};
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+  }
+`;
+const Hamburger = styled.div`
+  display: none;
+  cursor: pointer;
+  font-size: 22px;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 
-
 const Navbar = ({ activeSection, setActiveSection }) => {
+    const [menuOpen, setMenuOpen] = useState(false);   // ADDED
 
     const scrollToSection = (sectionId) => {
-    setActiveSection(sectionId);
+        setActiveSection(sectionId);
 
-    const element = document.getElementById(sectionId);
+        const element = document.getElementById(sectionId);
 
-    if (element) {
-        element.scrollIntoView({
-            behavior: "smooth",
-        });
-    }
-};
+        if (element) {
+            element.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+    };
 
     return (
         <Nav>
+            <Hamburger onClick={() => setMenuOpen(!menuOpen)}>
+                ☰
+            </Hamburger>
 
-            <NavItem
-                $isActive={activeSection === "hero"}
-                onClick={() => scrollToSection("hero")}
-            >
-                Home
-            </NavItem>
+            <Menu $open={menuOpen}>
+                <NavItem
+                    $isActive={activeSection === "hero"}
+                    onClick={() => {
+                        scrollToSection("hero");
+                        setMenuOpen(false);
+                    }}
+                >
+                    Home
+                </NavItem>
 
-            <NavItem
-                $isActive={activeSection === "about"}
-                onClick={() => scrollToSection("about")}
-            >
-                About
-            </NavItem>
+                <NavItem
+                    $isActive={activeSection === "about"}
+                    onClick={() =>{ scrollToSection("about"); setMenuOpen(false);}}
+                >
+                    About
+                </NavItem>
 
-            <NavItem
-                $isActive={activeSection === "skills"}
-                onClick={() => scrollToSection("skills")}
-            >
-                Skills
-            </NavItem>
+                <NavItem
+                    $isActive={activeSection === "skills"}
+                    onClick={() => {scrollToSection("skills");setMenuOpen(false);}}
+                >
+                    Skills
+                </NavItem>
 
-            <NavItem
-                $isActive={activeSection === "experience"}
-                onClick={() => scrollToSection("experience")}
-            >
-                Experience
-            </NavItem>
+                <NavItem
+                    $isActive={activeSection === "experience"}
+                    onClick={() => {scrollToSection("experience");setMenuOpen(false);}}
+                >
+                    Experience
+                </NavItem>
 
-
-
-            <NavItem
-                $isActive={activeSection === "contact"}
-                onClick={() => scrollToSection("contact")}
-            >
-                Contact
-            </NavItem>
-
-
+                <NavItem
+                    $isActive={activeSection === "contact"}
+                    onClick={() => {scrollToSection("contact");setMenuOpen(false);}}
+                >
+                    Contact
+                </NavItem>
+            </Menu>
         </Nav>
     );
 }
