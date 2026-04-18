@@ -59,12 +59,20 @@ function Skills() {
           <TagContainer>
 
             <SkillTag name="Python" color="#3776AB" />
-
-            <SkillTag name="JavaScript" color="#F7DF1E" />
-
+            <SkillTag
+              name="JavaScript"
+              color="#F7DF1E"
+              textColor="black"
+            />
             <SkillTag name="C" color="#00599C" />
-
             <SkillTag name="Verilog" color="#8E44AD" />
+
+            {/* test tag */}
+            <SkillTag
+              name="Test"
+              color="black"
+              textColor="red"
+            />
 
           </TagContainer>
 
@@ -72,18 +80,14 @@ function Skills() {
 
         <Category>
 
-          <h3>Tools & Technologies</h3>
+          <h3>Tools & Frameworks</h3>
 
           <TagContainer>
 
-            <SkillTag name="Git" color="#F05032" />
-
-            <SkillTag name="Linux" color="#FCC624" />
-
+            <SkillTag name="Git" color="#d1391e" />
+            <SkillTag name="Linux" color="#FCC624" textColor="black" />
             <SkillTag name="VS Code" color="#007ACC" />
-
             <SkillTag name="React" color="#61DAFB" />
-
             <SkillTag name="Node.js" color="#339933" />
 
           </TagContainer>
@@ -94,17 +98,13 @@ function Skills() {
 
         <Category>
 
-          <h3>Core Subjects</h3>
+          <h3>Cloud Platforms</h3>
 
           <TagContainer>
 
-            <SkillTag name="Digital Electronics" color="#8E44AD" />
-
-            <SkillTag name="Signal Processing" color="#16A085" />
-
-            <SkillTag name="Embedded Systems" color="#D35400" />
-
-            <SkillTag name="Microprocessors" color="#2C3E50" />
+            <SkillTag name="AWS" color="#b34e35" />
+            <SkillTag name="Microsoft Azure" color="#096194" />
+            <SkillTag name="GCP" color="#00d3d3" />
 
           </TagContainer>
 
