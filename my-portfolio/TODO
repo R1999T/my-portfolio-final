@@ -40,3 +40,78 @@ DONE:
 ✔ No layout glitches
 ✔ Clean base for features
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+18/4/26
+Done:
+Experience Section — Progress Notes (for your TODO list)
+Structure / Architecture
+Created Experience section using reusable Section component
+Added Timeline wrapper inside Experience.jsx
+Created reusable ExperienceCard component
+Used component-based structure for scalability (multiple experiences)
+src/sections/Experience.jsx
+src/components/ExperienceCard.jsx
+Timeline Layout
+Implemented vertical timeline line using ::before pseudo-element
+Positioned line using position: absolute
+Removed temporary min-height after cards were added
+Added max-width and centered timeline container
+
+Key properties used:
+
+position: relative
+::before
+left positioning
+top: 0
+bottom: 0
+Experience Card UI
+Created glassy card container using styled-components
+Set card width to 100%
+Added left offset to align with timeline
+Added internal padding for readability
+
+Glass effect implemented using:
+
+background: rgba(...)
+backdrop-filter: blur(...)
+border
+Dot Indicator
+Added small filled circular dot for each experience
+Positioned dot absolutely relative to card
+Aligned dot with timeline line
+
+Key properties:
+
+position: absolute
+border-radius: 50%
+box-shadow
+Single-Container Illusion (Important UI Pattern)
+Removed spacing between cards
+Applied borders selectively
+Used pseudo-selectors to control edges
+&:first-child
+&:last-child
+
+Result:
+
+Multiple cards visually appear as one continuous glass container
+Hover Interaction
+Added subtle hover animation
+Used small vertical movement
+Applied light neumorphic-style shadow
+transform: translateY(-2px)
+transition
+box-shadow
+Layout Behavior
+Timeline container constrained using:
+max-width
+margin: 0 auto
+padding-left
+
+Purpose:
+
+Prevent overly wide layout
+Keep professional centered design
+Maintain alignment with timeline
+

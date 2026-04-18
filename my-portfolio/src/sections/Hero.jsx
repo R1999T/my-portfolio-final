@@ -11,7 +11,6 @@ function Hero() {
                 style={{
                     display: "flex",
                     flexWrap: "wrap",
-                    alignItems: "flex-start",
                     justifyContent: "center",
                     marginTop: "90px",
                     gap: "10px",

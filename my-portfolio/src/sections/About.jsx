@@ -5,6 +5,7 @@ const Content = styled.div`
 
   max-width: 800px;
   alignItems: "flex-start",
+  justify-content: "center",
 
   h2 {
     margin-bottom: 16px;
@@ -18,11 +19,11 @@ const Content = styled.div`
 
 function About() {
   return (
-    <Section id="about">
+    <Section id="about" >
 
       <Content 
       >
-        <h2>About Me!</h2>
+        <h2 >About Me!</h2>
         <p>
           I am an Electronics and Communication Engineering graduate with a strong
           interest in VLSI design and hardware systems. Currently, I am preparing for
@@ -30,17 +31,6 @@ function About() {
           embedded systems, and software development.
         </p>
 
-
-        <h3>Skills</h3>
-
-        <ul>
-          <li>Digital Electronics</li>
-          <li>Verilog / VHDL</li>
-          <li>Embedded Systems</li>
-          <li>Signal Processing</li>
-          <li>C / Python</li>
-          <li>Linux / Git</li>
-        </ul>
       </Content>
 
     </Section>
