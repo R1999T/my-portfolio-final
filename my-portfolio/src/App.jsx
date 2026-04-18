@@ -6,15 +6,16 @@ import Navbar from "./components/Navbar";
 
 import Hero from "./sections/Hero";
 import About from "./sections/About";
-import Services from "./sections/Services";
+import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
+import Experience from "./sections/Experience"
 
 
 function App() {
   const [activeSection, setActiveSection] = useState("hero");
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "about", "services", "contact"];
+      const sections = ["hero", "about", "skills", "contact"];
 
       const scrollPosition = window.scrollY + 100;
 
@@ -48,7 +49,8 @@ function App() {
       />
       <Hero />
       <About />
-      <Services />
+      <Skills />
+      <Experience />
       <Contact />
 
     </>

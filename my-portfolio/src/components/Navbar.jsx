@@ -129,11 +129,20 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             </NavItem>
 
             <NavItem
-                $isActive={activeSection === "services"}
-                onClick={() => scrollToSection("services")}
+                $isActive={activeSection === "skills"}
+                onClick={() => scrollToSection("skills")}
             >
-                Services
+                Skills
             </NavItem>
+
+            <NavItem
+                $isActive={activeSection === "experience"}
+                onClick={() => scrollToSection("experience")}
+            >
+                Experience
+            </NavItem>
+
+
 
             <NavItem
                 $isActive={activeSection === "contact"}
@@ -141,6 +150,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             >
                 Contact
             </NavItem>
+
 
         </Nav>
     );
