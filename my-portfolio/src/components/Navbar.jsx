@@ -36,7 +36,7 @@ const Nav = styled.nav`
 
   z-index: 1000;
 @media (max-width: 768px) {
-  justify-content: space-between;
+  justify-content: center;
   padding: 12px 16px;
 }
 
@@ -66,7 +66,7 @@ const Menu = styled.div`
   @media (max-width: 768px) {
     display: ${({ $open }) => ($open ? "flex" : "none")};
     flex-direction: column;
-    width: 100%;
+    width: auto;
     align-items: center;
     margin-top: 10px;
   }
@@ -75,6 +75,13 @@ const Hamburger = styled.div`
   display: none;
   cursor: pointer;
   font-size: 22px;
+position: absolute;
+
+top: 18px;
+left: 20px;
+transform: none;
+position: absolute;
+z-index: 1001;
 
   @media (max-width: 768px) {
     display: block;
