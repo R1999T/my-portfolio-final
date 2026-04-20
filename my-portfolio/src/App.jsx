@@ -15,7 +15,7 @@ function App() {
   const [activeSection, setActiveSection] = useState("hero");
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "about", "skills", "contact"];
+      const sections = ["hero", "about", "skills","experience", "contact"];
 
       const scrollPosition = window.scrollY + 100;
 

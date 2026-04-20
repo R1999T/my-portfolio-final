@@ -51,28 +51,12 @@ const NavItem = styled.div`
     color: ${({ $isActive }) =>
         $isActive ? "#22c55e" : "white"};
 
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-
-        width: ${({ $isActive }) =>
-        $isActive ? "100%" : "0"};
-
-        height: 2px;
-        background-color: #22c55e;
-        transition: width 0.3s ease;
-    }
 
     &:hover {
         color: #22c55e;
     }
 
-    &:hover::after {
-        width: 100%;
-    }
-  }
+
 `;
 
 const Menu = styled.div`
