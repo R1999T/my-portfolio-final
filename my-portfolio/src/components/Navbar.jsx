@@ -73,8 +73,10 @@ const Menu = styled.div`
 `;
 const Hamburger = styled.div`
   display: none;
-  cursor: pointer;
-  font-size: 22px;
+ cursor: pointer;
+font-size: 26px;
+transition: 0.2s ease;
+user-select: none;
 position: absolute;
 
 top: 18px;
@@ -107,7 +109,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     return (
         <Nav>
             <Hamburger onClick={() => setMenuOpen(!menuOpen)}>
-                ☰
+                {menuOpen ? "✕" : "☰"}
             </Hamburger>
 
             <Menu $open={menuOpen}>

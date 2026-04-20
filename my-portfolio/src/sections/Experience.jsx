@@ -52,6 +52,7 @@ function Experience() {
             "Handled VM- and container-based deployment of frontend and backend services on AWS and GCP."
           ]}
         />
+        <ExperienceCard />
 
       </Timeline>
 

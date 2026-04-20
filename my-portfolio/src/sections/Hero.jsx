@@ -1,4 +1,5 @@
 import Section from "../components/Section";
+import "./Hero.css";
 
 function Hero() {
     return (
@@ -28,7 +29,9 @@ function Hero() {
                         border: "2px solid #22c55e",
                         display: "flex",
                         alignItems: "center",
-                        justifyContent: "center"
+                        justifyContent: "center",
+                        transition: "transform 0.25s ease, box-shadow 0.25s ease",
+
                     }}
                 >
                     <img
