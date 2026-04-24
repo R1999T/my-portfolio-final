@@ -67,13 +67,6 @@ function Skills() {
             <SkillTag name="C" color="#00599C" />
             <SkillTag name="Verilog" color="#8E44AD" />
 
-            {/* test tag */}
-            <SkillTag
-              name="Test"
-              color="black"
-              textColor="red"
-            />
-
           </TagContainer>
 
         </Category>
@@ -87,6 +80,7 @@ function Skills() {
             <SkillTag name="Git" color="#d1391e" />
             <SkillTag name="Linux" color="#FCC624" textColor="black" />
             <SkillTag name="VS Code" color="#007ACC" />
+            <SkillTag name="FastAPI" color="#b1c1c5" />
             <SkillTag name="React" color="#61DAFB" />
             <SkillTag name="Node.js" color="#339933" />
 

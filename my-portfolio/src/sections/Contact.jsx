@@ -27,7 +27,7 @@ function Contact() {
         </div>
 
         <div className="contact-icons">
-          <FaGithub />
+          {/* <FaGithub /> */}
           <a
             href="https://www.linkedin.com/in/raghav-tiwari/"
             target="_blank"

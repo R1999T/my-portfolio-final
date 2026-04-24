@@ -1,20 +1,33 @@
 import Section from "../components/Section";
 import styled from "styled-components";
 
+
 const Content = styled.div`
 
   max-width: 800px;
-  alignItems: "flex-start",
-  justify-content: "center",
+  align-items: flex-start;
+  justify-content: center;
+
+    h1 {
+    text-align: center;
+    margin-bottom: 16px;
+    width: 100%;
+  }
 
   h2 {
     margin-bottom: 16px;
   }
 
   h3 {
-  margin-top: 24px;
-  margin-bottom: 12px;
-}
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    text-align: justify;
+    line-height: 1.6;
+  }
+
 `;
 
 function About() {
@@ -24,7 +37,7 @@ function About() {
       <Content 
       >
         <h1 >About Me!</h1>
-        
+
         <p>
           I am an Electronics and Communication Engineering graduate with a strong
           interest in VLSI design and hardware systems. Currently, I am preparing for
