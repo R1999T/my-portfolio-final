@@ -85,3 +85,13 @@ nav a:hover {
   padding-top: 20px;
 }
 
+.footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 20px auto;
+
+  text-align: center;
+
+  font-size: 14px;
+  opacity: 0.7;
+}

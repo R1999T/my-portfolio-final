@@ -23,7 +23,8 @@ function About() {
 
       <Content 
       >
-        <h2 >About Me!</h2>
+        <h1 >About Me!</h1>
+        
         <p>
           I am an Electronics and Communication Engineering graduate with a strong
           interest in VLSI design and hardware systems. Currently, I am preparing for

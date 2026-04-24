@@ -65,7 +65,15 @@ function Hero() {
                     <p style={{ marginBottom: "20px" }}>
                         Aspiring VLSI / Hardware Engineer
                     </p>
-                    
+
+                    <a
+                        href="/files/rt_resume.pdf"
+                        download
+                        className="resume-button"
+                    >
+                        Download Resume
+                    </a>
+
                 </div>
 
             </div>

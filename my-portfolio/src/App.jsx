@@ -15,7 +15,7 @@ function App() {
   const [activeSection, setActiveSection] = useState("hero");
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "about", "skills","experience", "contact"];
+      const sections = ["hero", "about", "skills", "experience", "contact"];
 
       const scrollPosition = window.scrollY + 100;
 
@@ -53,16 +53,16 @@ function App() {
       <Experience />
       <Contact />
 
+      {/* Footer */}
+<footer className="footer">
+  © 2026 Raghav Tiwari. All rights reserved.
+</footer>
+
     </>
   );
 
 }
 
 export default App;
-// function App() {
-//   return (
-//     <h1>Test Working</h1>
-//   )
-// }
 
-// export default App
+
