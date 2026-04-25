@@ -9,6 +9,10 @@ const Content = styled.div`
   max-width: 900px;
   margin: 0 auto; 
 
+  h1 {
+  line-height: 1.4;
+}
+
 
 h2 {
   margin-bottom: 24px;
@@ -23,7 +27,12 @@ h3 {
   margin-bottom: 8px;
 }
 
-
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+}
 
 `;
 
@@ -50,7 +59,7 @@ function Skills() {
 
       <Content>
 
-        <h2>Technologies I have been working with recently:</h2>
+        <h1>Technologies I have been working with recently:</h1>
 
         <Category>
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 function ExperienceCard({ logo, role, company, duration, description }) {
   return (
     <Card>
-      <Dot />
+      {/* <Dot /> */}
 
       <Header>
         <Logo src={logo} alt={company} />
@@ -81,8 +81,11 @@ const Card = styled.div`
   position: relative;
 
   width: 100%;
+  box-sizing: border-box;
+max-width: 100%;
+min-width: 0;
 
-  margin-left: 48px;
+  margin-left: 0;
 
   padding: 20px 24px;
 
@@ -119,30 +122,30 @@ const Card = styled.div`
 
   /* Mobile spacing */
   @media (max-width: 768px) {
-    margin-left: 28px;
+    margin-left: 0;
     padding: 16px 18px;
   }
 `;
 
-const Dot = styled.div`
-  position: absolute;
+// const Dot = styled.div`
+//   position: absolute;
 
-  left: -36px;   /* Desktop alignment */
+//   left: -36px;   /* Desktop alignment */
 
-  top: 26px;
+//   top: 26px;
 
-  width: 10px;
-  height: 10px;
+//   width: 10px;
+//   height: 10px;
 
-  border-radius: 50%;
+//   border-radius: 50%;
 
-  background: white;
+//   background: white;
 
-  box-shadow:
-    0 0 0 4px rgba(255, 255, 255, 0.08);
+//   box-shadow:
+//     0 0 0 4px rgba(255, 255, 255, 0.08);
 
-  /* Mobile alignment */
-  @media (max-width: 768px) {
-    left: -24px;
-  }
-`;
+//   /* Mobile alignment */
+//   @media (max-width: 768px) {
+//     left: -24px;
+//   }
+// `;

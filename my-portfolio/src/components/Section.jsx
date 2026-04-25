@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Section = styled.section`
 
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: ${({ fullHeight }) => (fullHeight ? "100vh" : "auto")};
   
   display: flex;
   justify-content: center;

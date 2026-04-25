@@ -3,7 +3,7 @@ import "./Hero.css";
 
 function Hero() {
     return (
-        <Section id="hero" style={{
+        <Section id="hero" fullHeight style={{
             paddingTop: "80px"
         }}>
 
