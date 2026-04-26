@@ -5,7 +5,7 @@ import "./Contact.css"
 
 function Contact() {
   return (
-    <Section id="contact">
+    <Section id="contact" >
       <div
         className="contact-container"
         style={{
@@ -20,7 +20,7 @@ function Contact() {
             // height: "1500px"
           }}
         >
-          <h1 style={{ marginBottom: "10px" }}>
+          <h1 style={{ marginBottom: "10px"}}>
             Happy to connect!
           </h1>
 

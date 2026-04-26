@@ -113,15 +113,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             </Hamburger>
 
             <Menu $open={menuOpen}>
-                <NavItem
-                    $isActive={activeSection === "hero"}
-                    onClick={() => {
-                        scrollToSection("hero");
-                        setMenuOpen(false);
-                    }}
-                >
-                    Home
-                </NavItem>
+
 
                 <NavItem
                     $isActive={activeSection === "about"}

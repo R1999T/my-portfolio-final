@@ -8,6 +8,7 @@ const Content = styled.div`
   text-align: center;
   max-width: 900px;
   margin: 0 auto; 
+  padding-bottom: 200px;
 
   h1 {
   line-height: 1.4;
