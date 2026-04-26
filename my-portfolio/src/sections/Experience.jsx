@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Section from "../components/Section";
 import styled from "styled-components";
 import ExperienceCard from "../components/ExperienceCard";
@@ -45,6 +46,8 @@ const ExperienceContainer = styled.div`
 `;
 
 function Experience() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <Section id="experience">
 
@@ -55,6 +58,8 @@ function Experience() {
         <Timeline>
 
           <ExperienceCard
+            isOpen={activeIndex === 0}
+            onClick={() => setActiveIndex(0)}
             logo="/logos/LTIMindtree.png"
             role="Software Engineer"
             company="LTIMindtree"
@@ -65,6 +70,19 @@ function Experience() {
               "Handled VM- and container-based deployment of frontend and backend services on AWS and GCP."
             ]}
           />
+          <ExperienceCard isOpen={activeIndex === 1}
+            onClick={() => setActiveIndex(1)}
+
+            logo="/logos/LTIMindtree.png"
+            role="Software Engineer"
+            company="LTIMindtree"
+            duration="July 2023 - Jan 2025"
+            description={[
+              "Developed workflows for BPMN image and document analysis and provided multi-model (LLMs) support using FastAPI and the LangChain framework, resulting in a 50–60% increase in productivity for Scrum Masters in document analysis and requirement creation.",
+              "Worked on an Agentic AI workflow to automate the process from requirement generation to the creation of epics, features, and user stories, resulting in a productivity increase of up to 70%.",
+              "Handled VM- and container-based deployment of frontend and backend services on AWS and GCP."
+            ]} />
+
 
 
         </Timeline>

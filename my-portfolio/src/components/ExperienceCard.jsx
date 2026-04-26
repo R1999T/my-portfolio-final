@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-function ExperienceCard({ logo, role, company, duration, description }) {
+function ExperienceCard({ logo, role, company, duration, description, isOpen, onClick }) {
   return (
-    <Card>
+    <Card onClick={onClick} isOpen={isOpen}>
       {/* <Dot /> */}
 
       <Header>
@@ -13,14 +13,18 @@ function ExperienceCard({ logo, role, company, duration, description }) {
           <p>{company}</p>
           <p>{duration}</p>
         </div>
+         <Arrow isOpen={isOpen}>▾</Arrow>  {/* add this */}
       </Header>
 
+      <DescriptionWrapper isOpen={isOpen}>
       <Description>
         {description &&
           description.map((item, index) => (
             <p key={index}>{item}</p>
           ))}
       </Description>
+
+      </DescriptionWrapper>
     </Card>
   );
 }
@@ -46,9 +50,19 @@ const Description = styled.div`
   }
 `;
 
+const Arrow = styled.span`
+  margin-left: auto;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  transform: ${({ isOpen }) => (isOpen ? "rotate(180deg)" : "rotate(0deg)")};
+  opacity: 0.7;
+`;
+
+
 const Header = styled.div`
   display: flex;
   align-items: flex-start;
+   cursor: pointer;
   gap: 16px;
 
   /* Slightly tighter spacing on small phones */
@@ -127,25 +141,8 @@ min-width: 0;
   }
 `;
 
-// const Dot = styled.div`
-//   position: absolute;
-
-//   left: -36px;   /* Desktop alignment */
-
-//   top: 26px;
-
-//   width: 10px;
-//   height: 10px;
-
-//   border-radius: 50%;
-
-//   background: white;
-
-//   box-shadow:
-//     0 0 0 4px rgba(255, 255, 255, 0.08);
-
-//   /* Mobile alignment */
-//   @media (max-width: 768px) {
-//     left: -24px;
-//   }
-// `;
+const DescriptionWrapper = styled.div`
+  max-height: ${({ isOpen }) => (isOpen ? "600px" : "0px")};
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+`;
