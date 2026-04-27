@@ -17,6 +17,18 @@ padding-left: 40px;
 padding-right: 40px;
 padding-bottom: 60px;
 
+position: relative;
+
+&::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 
   transition: all 0.3s ease;
 

@@ -60,7 +60,7 @@ function Skills() {
 
       <Content>
 
-        <h1>Technologies I have been working with recently:</h1>
+        <h1>Technologies I have worked on:</h1>
 
         <Category>
 
@@ -69,13 +69,9 @@ function Skills() {
           <TagContainer>
 
             <SkillTag name="Python" color="#3776AB" />
-            <SkillTag
-              name="JavaScript"
-              color="#F7DF1E"
-              textColor="black"
-            />
             <SkillTag name="C" color="#00599C" />
             <SkillTag name="Verilog" color="#8E44AD" />
+
 
           </TagContainer>
 
@@ -89,10 +85,12 @@ function Skills() {
 
             <SkillTag name="Git" color="#d1391e" />
             <SkillTag name="Linux" color="#FCC624" textColor="black" />
-            <SkillTag name="VS Code" color="#007ACC" />
-            <SkillTag name="FastAPI" color="#b1c1c5" />
+            <SkillTag name="FastAPI" color="#56a143" />
+            <SkillTag name="CI/CD"/>
+
             <SkillTag name="React" color="#61DAFB" />
             <SkillTag name="Node.js" color="#339933" />
+            <SkillTag name="VS Code" color="#007ACC" />
 
           </TagContainer>
 

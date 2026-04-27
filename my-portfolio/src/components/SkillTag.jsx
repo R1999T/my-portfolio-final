@@ -25,6 +25,15 @@ justify-content: center;
   color: ${({ textColor }) => textColor || "white"};
 
 
+    cursor: default;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+
 `;
 
 function SkillTag({ name, color,textColor }) {

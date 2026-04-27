@@ -44,8 +44,9 @@ function About() {
             flexWrap: "wrap",
             justifyContent: "center",
             marginTop: "90px",
-            gap: "10px",
-            padding: "0 40px"
+            gap: "40px",
+            padding: "0 40px",
+            alignItems: "center" 
           }}
         >
           <div
@@ -61,7 +62,7 @@ function About() {
             }}
           >
             <img
-              src="/images/dp.jpeg"
+              src="/images/avatar.png"
               alt="Profile"
               style={{
                 width: "100%",
@@ -77,17 +78,16 @@ function About() {
             style={{
               maxWidth: "500px",
               lineHeight: "1.5",
+              alignItems: "center" 
             }}
           >
             <h1 style={{ marginBottom: "10px" }}>
-              Hello, I'm RAGHAV TIWARI
+              HOLA! I'm RAGHAV TIWARI
             </h1>
             <h2 style={{ marginBottom: "10px", fontWeight: "normal" }}>
-              Electronics & Communication Engineer
-            </h2>
-            <p style={{ marginBottom: "20px" }}>
               Aspiring VLSI / Hardware Engineer
-            </p>
+            </h2>
+
             <a
               href="/files/rt_resume.pdf"
               download
