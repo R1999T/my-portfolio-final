@@ -5,14 +5,13 @@ import { useState } from "react";   // ADDED
 
 
 const Nav = styled.nav`
-
   position: fixed;
 
   top: 12px;
   left: 12px;
   right: 12px;
 
-  min-height: 60px; 
+  min-height: 60px;
 
   display: flex;
   align-items: center;
@@ -20,43 +19,34 @@ const Nav = styled.nav`
 
   gap: 40px;
 
-  /* Glass effect */
-
-  background: rgba(255, 255, 255, 0.08);
-
+  background: rgba(248, 248, 246, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
   border-radius: 14px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
 
-  border: 1px solid rgba(255,255,255,0.2);
-
-  box-shadow:
-    0 8px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 
   z-index: 1000;
-@media (max-width: 768px) {
-  justify-content: center;
-  padding: 12px 16px;
-}
 
+  @media (max-width: 768px) {
+    justify-content: center;
+    padding: 12px 16px;
+  }
 `;
 
 const NavItem = styled.div`
-    cursor: pointer;
-    position: relative;
-    padding-bottom: 6px;
-    transition: color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+  color: ${({ $isActive }) => ($isActive ? "#1a1a1a" : "#888")};
+  font-weight: ${({ $isActive }) => ($isActive ? "500" : "400")};
 
-    color: ${({ $isActive }) =>
-        $isActive ? "#22c55e" : "white"};
-
-
-    &:hover {
-        color: #22c55e;
-    }
-
-
+  &:hover {
+    color: #1a1a1a;
+  }
 `;
 
 const Menu = styled.div`

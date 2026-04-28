@@ -55,14 +55,14 @@ function About() {
               width: "220px",
               height: "220px",
               borderRadius: "50%",
-              border: "2px solid #22c55e",
+              // border: "5px solid #1a1a1a",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
             <img
-              src="/images/avatar.png"
+              src="/images/angry_birds_kid.jpg"
               alt="Profile"
               style={{
                 width: "100%",
