@@ -13,9 +13,9 @@ const Section = styled.section`
   margin: 0 auto;
   
   padding-top: 40px;
-padding-left: 40px;
-padding-right: 40px;
-padding-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 60px;
 
 position: relative;
 
