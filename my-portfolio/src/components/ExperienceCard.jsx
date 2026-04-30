@@ -13,7 +13,7 @@ function ExperienceCard({ logo, role, company, duration, description, isOpen, on
           <p>{company}</p>
           <p>{duration}</p>
         </div>
-         <Arrow isOpen={isOpen}>▾</Arrow>  {/* add this */}
+         <RadioBtn isOpen={isOpen} />
       </Header>
 
       <DescriptionWrapper isOpen={isOpen}>
@@ -50,12 +50,19 @@ const Description = styled.div`
   }
 `;
 
-const Arrow = styled.span`
+const RadioBtn = styled.span`
   margin-left: auto;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-  transform: ${({ isOpen }) => (isOpen ? "rotate(180deg)" : "rotate(0deg)")};
-  opacity: 0.7;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+
+  background: ${({ isOpen }) =>
+    isOpen
+      ? "linear-gradient(135deg, #6366f1, #06b6d4)"
+      : "linear-gradient(white, white) padding-box, linear-gradient(135deg, #6366f1, #06b6d4) border-box"};
+  border: ${({ isOpen }) => (isOpen ? "none" : "2px solid transparent")};
 `;
 
 

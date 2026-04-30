@@ -49,7 +49,7 @@ function Experience() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <Section id="experience">
+    <Section id="experience" hideDivider>
 
       <ExperienceContainer>
 

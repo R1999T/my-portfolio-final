@@ -44,14 +44,14 @@
 
 .contact-icons svg:hover {
   transform: translateY(-4px);
-
-  /* green glow */
-  box-shadow: 0 0 14px rgba(34, 197, 94, 0.7);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4),
+              0 2px 8px rgba(6, 182, 212, 0.3);
 }
 
 @media (max-width: 768px) {
   .contact-icons svg {
-    box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4),
+                0 2px 8px rgba(6, 182, 212, 0.3);
   }
 }
 
@@ -71,9 +71,8 @@
 
 .contact-email:hover {
   transform: translateY(-2px);
-
-  /* same green glow theme */
-  text-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+  text-shadow: 2px 2px 8px rgba(99, 102, 241, 0.5),
+               -2px -2px 8px rgba(6, 182, 212, 0.4);
 }
 
 .copyright {

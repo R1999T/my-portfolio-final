@@ -7,9 +7,10 @@ import { useState } from "react";   // ADDED
 const Nav = styled.nav`
   position: fixed;
 
-  top: 12px;
-  left: 12px;
-  right: 12px;
+top: 0;
+left: 0;
+right: 0;
+border-radius: 0;
 
   min-height: 60px;
 
@@ -23,7 +24,7 @@ const Nav = styled.nav`
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
-  border-radius: 14px;
+
   border: 0.5px solid rgba(0, 0, 0, 0.1);
 
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
