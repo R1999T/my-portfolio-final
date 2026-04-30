@@ -10,23 +10,14 @@ const Content = styled.div`
   margin: 0 auto; 
   padding-bottom: 200px;
 
-  h1 {
-  line-height: 1.4;
-}
+h1 { line-height: 1.4; color: white; }
 
 
 h2 {
   margin-bottom: 24px;
 }
 
-h3 {
-  margin-top: 28px;
-  margin-bottom: 10px;
-}
-h3 {
-  margin-top: 28px;
-  margin-bottom: 8px;
-}
+h3 { margin-top: 28px; margin-bottom: 8px; color: rgba(255,255,255,0.6); }
 
 @media (max-width: 768px) {
   h1 {
@@ -56,7 +47,11 @@ const TagContainer = styled.div`
 
 function Skills() {
   return (
-    <Section id="skills">
+    <Section id="skills"  style={{ 
+  background: "#1a1a1a",
+  maxWidth: "100%",
+  width: "100%"
+}}>
 
       <Content>
 
@@ -68,9 +63,9 @@ function Skills() {
 
           <TagContainer>
 
-            <SkillTag name="Python" color="#3776AB" />
-            <SkillTag name="C" color="#00599C" />
-            <SkillTag name="Verilog" color="#8E44AD" />
+            <SkillTag name="Python" />
+            <SkillTag name="C"  />
+            <SkillTag name="Verilog"/>
 
 
           </TagContainer>
@@ -83,14 +78,14 @@ function Skills() {
 
           <TagContainer>
 
-            <SkillTag name="Git" color="#d1391e" />
-            <SkillTag name="Linux" color="#FCC624" textColor="black" />
-            <SkillTag name="FastAPI" color="#56a143" />
+            <SkillTag name="Git"  />
+            <SkillTag name="Linux"  />
+            <SkillTag name="FastAPI"  />
             <SkillTag name="CI/CD"/>
 
-            <SkillTag name="React" color="#61DAFB" />
-            <SkillTag name="Node.js" color="#339933" />
-            <SkillTag name="VS Code" color="#007ACC" />
+            <SkillTag name="React"  />
+            <SkillTag name="Node.js"  />
+            <SkillTag name="VS Code" />
 
           </TagContainer>
 
@@ -104,9 +99,9 @@ function Skills() {
 
           <TagContainer>
 
-            <SkillTag name="AWS" color="#b34e35" />
-            <SkillTag name="Microsoft Azure" color="#096194" />
-            <SkillTag name="GCP" color="#00d3d3" />
+            <SkillTag name="AWS" />
+            <SkillTag name="Microsoft Azure" />
+            <SkillTag name="GCP" />
 
           </TagContainer>
 

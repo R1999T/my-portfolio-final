@@ -22,19 +22,20 @@ const Section = styled.section`
   position: relative;
 
 &::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    #6366f1,
-    #06b6d4
-  );
-}
+    content: "";
+    display: ${({ hideDivider }) => (hideDivider ? "none" : "block")};
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      #6366f1,
+      #06b6d4
+    );
+  }
 `;  
 
 export default Section;

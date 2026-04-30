@@ -33,7 +33,7 @@ const Content = styled.div`
 
 function About() {
   return (
-    <Section id="about" fullHeight style={{ paddingTop: "80px" }}>
+    <Section id="about" fullHeight style={{ paddingTop: "80px" }} hideDivider>
       <Content>
 
         {/* Hero content */}
