@@ -64,8 +64,7 @@ function Skills() {
           <TagContainer>
 
             <SkillTag name="Python" />
-            <SkillTag name="C"  />
-            <SkillTag name="Verilog"/>
+            <SkillTag name="cpp"  />
 
 
           </TagContainer>
